@@ -1,0 +1,115 @@
+/* Celular primeiro: topo com logo e Publicar, menu fixo na parte de baixo. */
+.layout {
+  min-height: 100vh;
+  padding-bottom: 5rem; /* espaço para o menu inferior não cobrir o conteúdo */
+}
+
+.sidebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background-color: var(--color-gray-dark);
+}
+
+.publish {
+  width: 8rem;
+}
+
+.nav {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background-color: var(--color-gray-dark);
+  border-top: 1px solid var(--color-gray);
+}
+
+.navList {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: var(--space-sm) 0;
+  list-style: none;
+}
+
+.navItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-xs) var(--space-sm);
+  border: none;
+  border-radius: var(--radius-sm);
+  background: none;
+  font: var(--font-label);
+  color: var(--color-gray-medium);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navItem:hover,
+.active {
+  color: var(--color-offwhite);
+}
+
+.active {
+  font-weight: 500;
+}
+
+.content {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: var(--space-md);
+}
+
+/* Desktop: menu vira coluna lateral fixa. */
+@media (min-width: 768px) {
+  .layout {
+    display: flex;
+    gap: var(--space-lg);
+    padding: var(--space-xl);
+  }
+
+  .sidebar {
+    position: sticky;
+    top: var(--space-xl);
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: var(--space-xl);
+    height: fit-content;
+    min-width: 10rem;
+    padding: var(--space-xl) var(--space-md);
+    border-radius: var(--radius-md);
+  }
+
+  .publish {
+    width: 100%;
+  }
+
+  .nav {
+    position: static;
+    border-top: none;
+    background: none;
+  }
+
+  .navList {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-lg);
+    padding: 0;
+  }
+
+  .navItem {
+    font: var(--font-paragraph-small);
+  }
+
+  .content {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+  }
+}
