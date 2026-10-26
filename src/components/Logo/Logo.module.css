@@ -1,0 +1,23 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--color-offwhite);
+}
+
+.icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  fill: none;
+  stroke: var(--color-green-highlight);
+  stroke-width: 2;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  line-height: 0.9;
+  letter-spacing: 0.05em;
+}

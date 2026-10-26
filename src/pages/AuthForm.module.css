@@ -1,0 +1,53 @@
+/* Estilos compartilhados pelas páginas de Login e Cadastro. */
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.title {
+  font: var(--font-subtitle);
+  font-weight: 500;
+  color: var(--color-offwhite);
+}
+
+.subtitle {
+  font: var(--font-paragraph);
+  color: var(--color-offwhite);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+.textButton {
+  padding: 0;
+  border: none;
+  background: none;
+  font: var(--font-paragraph-small);
+  color: var(--color-gray-light);
+  text-decoration: underline;
+  cursor: not-allowed;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-xs);
+  font: var(--font-paragraph-small);
+  color: var(--color-offwhite);
+}
+
+.footer a {
+  font-weight: 500;
+}
