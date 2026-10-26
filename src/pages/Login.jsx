@@ -1,9 +1,10 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Button from '../components/Button/Button.jsx'
 import Checkbox from '../components/Checkbox/Checkbox.jsx'
 import SocialLogin from '../components/SocialLogin/SocialLogin.jsx'
 import TextField from '../components/TextField/TextField.jsx'
+import { useAuth } from '../context/useAuth.js'
 import AuthLayout from '../layouts/AuthLayout/AuthLayout.jsx'
 import { hasErrors, validateLogin } from '../utils/validation.js'
 import styles from './AuthForm.module.css'
@@ -13,19 +14,32 @@ const initialValues = { identifier: '', password: '', remember: false }
 function Login() {
   const [values, setValues] = useState(initialValues)
   const [errors, setErrors] = useState({})
+  const [submitError, setSubmitError] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const { login } = useAuth()
+  const navigate = useNavigate()
 
   function handleChange(event) {
     const { name, value, type, checked } = event.target
     setValues({ ...values, [name]: type === 'checkbox' ? checked : value })
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault()
+    setSubmitError('')
     const validationErrors = validateLogin(values)
     setErrors(validationErrors)
 
     if (hasErrors(validationErrors)) return
-    // A autenticação será conectada na etapa seguinte (AuthContext).
+
+    setIsSubmitting(true)
+    try {
+      await login(values)
+      navigate('/feed')
+    } catch (error) {
+      setSubmitError(error.message)
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -71,7 +85,15 @@ function Login() {
           </button>
         </div>
 
-        <Button type="submit">Login →</Button>
+        {submitError && (
+          <p className={styles.submitError} role="alert">
+            {submitError}
+          </p>
+        )}
+
+        <Button type="submit" disabled={isSubmitting}>
+          {isSubmitting ? 'Entrando...' : 'Login →'}
+        </Button>
       </form>
 
       <SocialLogin />
