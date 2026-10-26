@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Avatar from '../Avatar/Avatar.jsx'
 import PostStats from './PostStats.jsx'
 import styles from './PostCard.module.css'
@@ -10,7 +11,12 @@ function PostCard({ post }) {
       </div>
 
       <div className={styles.body}>
-        <h2 className={styles.title}>{post.title}</h2>
+        <h2 className={styles.title}>
+          {/* O ::after do link cobre o card inteiro, deixando tudo clicável. */}
+          <Link to={`/posts/${post.id}`} className={styles.link}>
+            {post.title}
+          </Link>
+        </h2>
         <p className={styles.description}>{post.description}</p>
       </div>
 

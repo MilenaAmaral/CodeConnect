@@ -1,4 +1,5 @@
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -50,4 +51,29 @@
   gap: var(--space-sm);
   font: var(--font-label);
   color: var(--color-offwhite);
+}
+
+.link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.card:hover .title,
+.link:focus-visible {
+  color: var(--color-green-highlight);
+}
+
+.card:has(.link:focus-visible) {
+  outline: 2px solid var(--color-green-highlight);
+  outline-offset: 2px;
+}
+
+.link:focus-visible {
+  outline: none;
 }

@@ -22,3 +22,7 @@ export function searchPosts(posts, query) {
     ),
   )
 }
+
+export function getPostById(id) {
+  return getPosts().find((post) => post.id === id) ?? null
+}
