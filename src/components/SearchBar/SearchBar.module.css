@@ -1,0 +1,40 @@
+.search {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-gray-dark);
+}
+
+.search:focus-within {
+  border-color: var(--color-green-highlight);
+}
+
+.icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+  fill: none;
+  stroke: var(--color-gray-light);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.input {
+  flex: 1;
+  border: none;
+  background: none;
+  font: var(--font-paragraph);
+  color: var(--color-offwhite);
+}
+
+.input::placeholder {
+  color: var(--color-gray-medium);
+}
+
+/* O contorno fica no container (focus-within) para destacar o campo inteiro. */
+.input:focus-visible {
+  outline: none;
+}

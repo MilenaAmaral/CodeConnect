@@ -55,7 +55,7 @@ describe('Fluxo completo de autenticação', () => {
     await userEvent.type(screen.getByLabelText('Senha'), '123456')
     await userEvent.click(screen.getByRole('button', { name: /cadastrar/i }))
 
-    expect(await screen.findByText('Olá, Milena Amaral!')).toBeInTheDocument()
+    expect(await screen.findByRole('heading', { name: 'Feed' })).toBeInTheDocument()
 
     await userEvent.click(screen.getByRole('button', { name: 'Sair' }))
     expect(screen.getByRole('heading', { name: 'Login' })).toBeInTheDocument()
