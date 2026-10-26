@@ -1,0 +1,36 @@
+/* Tokens do guia de estilos do Figma (cores e tipografia). */
+:root {
+  /* Cores */
+  --color-green-highlight: #81fe88;
+  --color-green-pastel: #bfffc3;
+  --color-green-petroleum: #132e35;
+  --color-graphite: #01080e;
+  --color-gray-dark: #171d1f;
+  --color-gray: #3e3e3f;
+  --color-gray-medium: #888888;
+  --color-gray-light: #bcbcbc;
+  --color-offwhite: #e1e1e1;
+  --color-white: #ffffff;
+  --color-error: #ff8a8a;
+
+  /* Tipografia: Prompt */
+  --font-family: 'Prompt', system-ui, sans-serif;
+  --font-heading: 500 2.75rem/1.2 var(--font-family); /* 44px */
+  --font-heading-small: 500 2.3125rem/1.2 var(--font-family); /* 37px */
+  --font-subtitle-large: 400 1.9375rem/1.5 var(--font-family); /* 31px */
+  --font-subtitle: 400 1.625rem/1.5 var(--font-family); /* 26px */
+  --font-paragraph-large: 400 1.375rem/1.5 var(--font-family); /* 22px */
+  --font-paragraph: 400 1.125rem/1.5 var(--font-family); /* 18px */
+  --font-paragraph-small: 400 0.9375rem/1.5 var(--font-family); /* 15px */
+  --font-label: 400 0.78125rem/1.5 var(--font-family); /* 12.5px */
+
+  /* Espaçamento e bordas */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 32px;
+}
