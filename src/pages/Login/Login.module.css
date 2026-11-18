@@ -1,0 +1,76 @@
+/* Espaçamentos verticais tirados do Figma */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.cabecalho {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 8px; /* 32 + 8 = os 40px do Figma entre título e campos */
+}
+
+.titulo {
+  font-size: var(--texto-subtitulo);
+  font-weight: var(--peso-semibold);
+}
+
+.subtitulo {
+  font-size: var(--texto-grande);
+}
+
+.campos {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Linha "Lembrar-me" + "Esqueci a senha" */
+.opcoes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -8px; /* no Figma ela fica a 8px do campo de senha, não a 16px */
+  font-size: var(--texto-pequeno);
+}
+
+.lembrar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--cor-cinza-medio);
+  cursor: pointer;
+}
+
+/* accent-color pinta o checkbox nativo com a cor da marca */
+.lembrar input {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--cor-verde-destaque);
+}
+
+.esqueci {
+  text-decoration: underline;
+}
+
+.rodape {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--texto-pequeno);
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--cor-verde-destaque);
+  font-size: var(--texto-paragrafo);
+}
+
+.link:hover {
+  text-decoration: underline;
+}
