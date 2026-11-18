@@ -1,0 +1,34 @@
+/*
+  Design tokens: valores do guia de estilos do Figma guardados em variáveis.
+  Se uma cor mudar, ela é alterada só aqui e o site inteiro acompanha.
+*/
+:root {
+  /* Cores (mesmos nomes usados no Figma) */
+  --cor-grafite: #00090e;         /* fundo da página */
+  --cor-cinza-escuro: #171d1f;    /* fundo de cards e menus */
+  --cor-cinza: #3e3e3f;
+  --cor-verde-petroleo: #132e35;
+  --cor-verde-destaque: #81fe88;  /* botões e destaques */
+  --cor-offwhite: #e1e1e1;        /* texto principal */
+  --cor-cinza-claro: #bcbcbc;
+  --cor-cinza-medio: #888888;     /* textos secundários */
+  --cor-branco: #ffffff;
+
+  /* Famílias de fonte, com fallback caso o Google Fonts não carregue */
+  --fonte-principal: 'Prompt', sans-serif;
+  --fonte-codigo: 'Roboto Mono', monospace;
+
+  /* Tamanhos em rem (1rem = 16px). rem respeita o zoom e a fonte configurada no navegador */
+  --texto-label: 0.78125rem;        /* 12.5px */
+  --texto-pequeno: 0.9375rem;       /* 15px */
+  --texto-paragrafo: 1.125rem;      /* 18px */
+  --texto-grande: 1.375rem;         /* 22px */
+  --texto-subtitulo: 1.9375rem;     /* 31px */
+
+  --peso-regular: 400;
+  --peso-semibold: 600;
+  --altura-linha: 1.5;
+
+  /* Sombra do card de código (efeito "$editor-shadow" do Figma) */
+  --sombra-editor: 0 16px 24px rgba(0, 0, 0, 0.24);
+}

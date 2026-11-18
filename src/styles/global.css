@@ -1,0 +1,60 @@
+/* Importa as variáveis antes de qualquer regra que as utilize */
+@import './tokens.css';
+
+/* Reset: zera margens padrão e faz a largura incluir padding e borda */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Avisa o navegador que o site é escuro (barras de rolagem e campos nativos se adaptam) */
+html {
+  color-scheme: dark;
+}
+
+body {
+  min-height: 100dvh; /* dvh considera a barra de endereço do celular */
+  background-color: var(--cor-grafite);
+  color: var(--cor-offwhite);
+  font-family: var(--fonte-principal);
+  font-size: var(--texto-paragrafo);
+  font-weight: var(--peso-regular);
+  line-height: var(--altura-linha);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Imagens nunca ultrapassam o container e não deixam espaço fantasma embaixo */
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Campos de formulário não herdam a fonte do body por padrão; aqui forçamos */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Contorno visível para quem navega pelo teclado (acessibilidade) */
+:focus-visible {
+  outline: 2px solid var(--cor-verde-destaque);
+  outline-offset: 2px;
+}

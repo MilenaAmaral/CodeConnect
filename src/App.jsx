@@ -1,7 +1,12 @@
-// Componente raiz. Por enquanto só confirma que o projeto roda;
-// na etapa 3 ele passa a controlar as rotas da aplicação.
+// Componente raiz. O parágrafo é só para conferir fonte e cores;
+// ele sai na etapa 3, quando entram as rotas.
 function App() {
-  return <h1>CodeConnect</h1>
+  return (
+    <main>
+      <h1>CodeConnect</h1>
+      <p>Onde a comunidade e o código se unem!</p>
+    </main>
+  )
 }
 
 export default App
