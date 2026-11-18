@@ -37,3 +37,11 @@
   gap: 4px;
   font-size: var(--texto-label);
 }
+
+/* Caixa 32x32 com o ícone centralizado */
+.icone {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+}
