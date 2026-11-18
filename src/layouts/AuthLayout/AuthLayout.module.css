@@ -1,0 +1,106 @@
+/* Ocupa a tela toda e centraliza o card */
+.pagina {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 100dvh;
+  padding: 56px 16px;
+  overflow: hidden; /* corta a parte dos símbolos que passa da borda */
+}
+
+/* Símbolos decorativos: ::before no canto superior esquerdo, ::after no inferior direito.
+   Pseudo-elementos evitam colocar no HTML imagens que não têm significado. */
+.pagina::before,
+.pagina::after {
+  content: '';
+  position: absolute;
+  width: 407px;
+  height: 486px;
+  background: url('../../assets/simbolo.svg') no-repeat center / contain;
+  pointer-events: none;
+}
+
+.pagina::before {
+  top: -7px;
+  left: 7%;
+}
+
+.pagina::after {
+  bottom: 0;
+  right: 7%;
+}
+
+/* Card escuro. z-index o coloca acima dos símbolos */
+.card {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+  max-width: 996px;
+  padding: 56px 78px;
+  background-color: var(--cor-cinza-escuro);
+  border-radius: 32px;
+}
+
+.banner {
+  position: relative;
+  flex: 0 0 407px; /* largura fixa de 407px no desktop, como no Figma */
+  height: 628px;
+}
+
+/* object-fit: cover preenche o espaço sem distorcer, cortando as sobras */
+.imagem {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Logo centralizado sobre a parte de baixo da foto */
+.logo {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.conteudo {
+  flex: 0 1 410px;
+  padding: 0 32px;
+}
+
+/* Tablet: a foto vai para cima do formulário */
+@media (max-width: 1023px) {
+  .card {
+    flex-direction: column;
+    gap: 32px;
+    max-width: 648px;
+    padding: 56px 60px;
+  }
+
+  .banner {
+    flex-basis: auto;
+    width: 100%;
+    max-width: 480px;
+    height: 415px;
+  }
+
+  .conteudo {
+    width: 100%;
+    max-width: 479px;
+    padding: 0;
+  }
+}
+
+/* Celular */
+@media (max-width: 600px) {
+  .card {
+    padding: 32px 16px;
+  }
+
+  .banner {
+    height: 360px;
+  }
+}
