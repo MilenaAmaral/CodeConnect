@@ -3,7 +3,9 @@ import AuthLayout from '../../layouts/AuthLayout/AuthLayout.jsx'
 import Input from '../../components/Input/Input.jsx'
 import Button from '../../components/Button/Button.jsx'
 import SocialLogin from '../../components/SocialLogin/SocialLogin.jsx'
-import styles from './Login.module.css'
+import bannerLogin from '../../assets/banner-login.jpg'
+// Estilos compartilhados com a tela de Cadastro
+import styles from '../../layouts/AuthLayout/AuthForm.module.css'
 
 function Login() {
   // useNavigate permite trocar de página pelo código, sem o usuário clicar num link
@@ -17,7 +19,8 @@ function Login() {
   }
 
   return (
-    <AuthLayout>
+    // imagem: cada tela de autenticação informa a sua foto ao layout
+    <AuthLayout imagem={bannerLogin}>
       <form className={styles.formulario} onSubmit={handleSubmit}>
         <header className={styles.cabecalho}>
           <h1 className={styles.titulo}>Login</h1>

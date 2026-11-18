@@ -1,19 +1,18 @@
 import Logo from '../../components/Logo/Logo.jsx'
-import banner from '../../assets/banner-login.jpg'
 import styles from './AuthLayout.module.css'
 
 /*
   Moldura compartilhada por Login e Cadastro.
-  "children" é tudo o que a página colocar entre <AuthLayout> e </AuthLayout>;
-  aqui, o formulário de cada tela.
+  - imagem: foto exibida ao lado do formulário (cada tela usa uma diferente)
+  - children: o formulário que a página coloca dentro do layout
 */
-function AuthLayout({ children }) {
+function AuthLayout({ imagem, children }) {
   return (
     <main className={styles.pagina}>
       <section className={styles.card}>
         <div className={styles.banner}>
           {/* alt vazio: a imagem é decorativa e o leitor de tela pode ignorá-la */}
-          <img src={banner} alt="" className={styles.imagem} />
+          <img src={imagem} alt="" className={styles.imagem} />
           <div className={styles.logo}>
             <Logo />
           </div>

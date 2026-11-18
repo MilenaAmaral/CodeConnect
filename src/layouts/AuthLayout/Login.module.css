@@ -74,3 +74,10 @@
 .link:hover {
   text-decoration: underline;
 }
+
+/* Variação usada no Cadastro: "Já tem conta? Faça seu login!" numa linha só */
+.rodapeEmLinha {
+  flex-direction: row;
+  justify-content: flex-start;
+  font-size: var(--texto-paragrafo);
+}
