@@ -25,3 +25,9 @@
   color: var(--cor-cinza-escuro);
   opacity: 0.7;
 }
+
+/* O autofill do Chrome/Edge pinta o fundo de azul; a sombra interna cobre essa cor */
+.input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px var(--cor-cinza-medio) inset;
+  -webkit-text-fill-color: var(--cor-cinza-escuro);
+}
