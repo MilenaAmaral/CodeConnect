@@ -1,0 +1,39 @@
+/* Base comum às duas variantes (medidas do Figma) */
+.botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: var(--texto-paragrafo);
+  font-weight: var(--peso-semibold);
+  line-height: var(--altura-linha);
+  transition: filter 0.2s, background-color 0.2s;
+}
+
+/* Verde preenchido: ação principal da tela */
+.primario {
+  background-color: var(--cor-verde-destaque);
+  color: var(--cor-verde-petroleo);
+}
+
+.primario:hover {
+  filter: brightness(0.9);
+}
+
+/* Só contorno: ação secundária, como "Descartar" */
+.secundario {
+  border: 1px solid var(--cor-verde-destaque);
+  color: var(--cor-verde-destaque);
+}
+
+.secundario:hover {
+  background-color: var(--cor-verde-petroleo);
+}
+
+.botao:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

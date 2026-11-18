@@ -1,0 +1,27 @@
+/* Rótulo em cima, campo embaixo, 8px entre eles (Figma) */
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.rotulo {
+  font-size: var(--texto-paragrafo);
+  color: var(--cor-offwhite);
+}
+
+.input {
+  width: 100%;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--cor-cinza-medio);
+  color: var(--cor-cinza-escuro);
+  font-size: var(--texto-pequeno);
+}
+
+.input::placeholder {
+  color: var(--cor-cinza-escuro);
+  opacity: 0.7;
+}
