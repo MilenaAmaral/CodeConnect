@@ -1,5 +1,6 @@
 import { Link } from 'react-router'
 import Avatar from '../Avatar/Avatar.jsx'
+import { contarComentarios } from '../../services/comentarios.js'
 import Estatisticas from './Estatisticas.jsx'
 import styles from './CardPost.module.css'
 
@@ -27,7 +28,7 @@ function CardPost({ post }) {
         <Estatisticas
           curtidas={post.curtidas}
           compartilhamentos={post.compartilhamentos}
-          comentarios={post.comentarios.length}
+          comentarios={contarComentarios(post.id)}
         />
         <span className={styles.autor}>
           <Avatar nome={post.autor.nome} />@{post.autor.usuario}

@@ -1,0 +1,137 @@
+.secao {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px 16px;
+  border-radius: 8px;
+  background-color: var(--cor-cinza-escuro);
+}
+
+.titulo {
+  font-size: var(--texto-paragrafo);
+  font-weight: var(--peso-semibold);
+}
+
+/* ---------- Formulário ---------- */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rotulo {
+  color: var(--cor-offwhite);
+  font-size: var(--texto-pequeno);
+}
+
+.campo {
+  width: 100%;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: var(--cor-cinza-medio);
+  color: var(--cor-cinza-escuro);
+  font-size: var(--texto-pequeno);
+  resize: vertical; /* deixa aumentar só a altura, para não quebrar o layout */
+}
+
+.campo[aria-invalid='true'] {
+  border-color: #ff8a8a;
+}
+
+.rodapeForm {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.contador {
+  color: var(--cor-cinza-medio);
+  font-size: var(--texto-label);
+}
+
+.botaoEnviar {
+  width: 180px;
+}
+
+.erro {
+  color: #ff8a8a;
+  font-size: var(--texto-label);
+}
+
+/* ---------- Lista ---------- */
+.lista,
+.respostas {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.lista {
+  gap: 16px;
+}
+
+/* Linha separando um comentário do outro */
+.comentario {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--cor-cinza);
+}
+
+.comentario:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.usuario {
+  font-size: var(--texto-label);
+  font-weight: var(--peso-semibold);
+}
+
+.texto {
+  color: var(--cor-cinza-claro);
+  font-size: var(--texto-pequeno);
+}
+
+.acoes {
+  display: flex;
+  gap: 16px;
+}
+
+.acao {
+  color: var(--cor-offwhite);
+  font-size: var(--texto-label);
+  font-weight: var(--peso-semibold);
+}
+
+.acao:hover {
+  color: var(--cor-verde-destaque);
+}
+
+/* Respostas recuadas, com uma linha à esquerda indicando a conversa */
+.respostas {
+  gap: 12px;
+  margin-left: 16px;
+  padding-left: 16px;
+  border-left: 1px solid var(--cor-cinza);
+}
+
+.resposta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.vazio {
+  color: var(--cor-cinza-claro);
+  font-size: var(--texto-pequeno);
+}

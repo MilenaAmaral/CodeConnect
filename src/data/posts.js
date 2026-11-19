@@ -19,7 +19,6 @@ export const postsIniciais = [
     autor: { nome: 'Júlio Andrade', usuario: 'julio' },
     curtidas: 12,
     compartilhamentos: 4,
-    comentarios: [],
     codigo: `function Botao({ children, variante = 'primario' }) {
   return <button className={variante}>{children}</button>
 }`,
@@ -33,7 +32,6 @@ export const postsIniciais = [
     autor: { nome: 'Marcela Lins', usuario: 'marcelalins' },
     curtidas: 30,
     compartilhamentos: 9,
-    comentarios: [],
     codigo: `const pluckDeep = (key) => (obj) =>
   key.split('.').reduce((accum, part) => accum[part], obj)
 
@@ -48,7 +46,6 @@ const compose = (...fns) => (res) =>
     autor: { nome: 'Gabriel Luz', usuario: 'gabriel_luz' },
     curtidas: 8,
     compartilhamentos: 2,
-    comentarios: [],
     codigo: `.botao {
   border-radius: 50%;
   box-shadow: 6px 6px 12px #2b2f37, -6px -6px 12px #49505f;
@@ -62,7 +59,6 @@ const compose = (...fns) => (res) =>
     autor: { nome: 'Júlio Andrade', usuario: 'julio' },
     curtidas: 21,
     compartilhamentos: 6,
-    comentarios: [],
     codigo: `const formatarDesconto = (valor) => \`\${Math.round(valor * 100)}% OFF\``,
   },
   {
@@ -73,7 +69,6 @@ const compose = (...fns) => (res) =>
     autor: { nome: 'Marcela Lins', usuario: 'marcelalins' },
     curtidas: 15,
     compartilhamentos: 3,
-    comentarios: [],
     codigo: `<input type="range" min="0" max="100" value="60" aria-label="Volume" />`,
   },
   {
@@ -84,7 +79,6 @@ const compose = (...fns) => (res) =>
     autor: { nome: 'Gabriel Luz', usuario: 'gabriel_luz' },
     curtidas: 5,
     compartilhamentos: 1,
-    comentarios: [],
     codigo: `const progresso = Math.min(feitas / total, 1)
 barra.style.width = \`\${progresso * 100}%\``,
   },
