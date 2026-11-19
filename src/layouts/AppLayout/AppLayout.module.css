@@ -1,0 +1,126 @@
+/*
+  Mobile first: os estilos base são os do celular.
+  O @media no fim do arquivo transforma a barra de baixo em coluna lateral.
+*/
+.layout {
+  min-height: 100dvh;
+  padding-bottom: 88px; /* espaço para a barra fixa não cobrir o conteúdo */
+}
+
+/* Topo no celular: logo à esquerda, Publicar à direita */
+.lateral {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+  background-color: var(--cor-cinza-escuro);
+}
+
+.publicar {
+  padding: 8px 24px;
+  border: 1px solid var(--cor-verde-destaque);
+  border-radius: 8px;
+  color: var(--cor-verde-destaque);
+  font-size: var(--texto-pequeno);
+  text-align: center;
+  transition: background-color 0.2s;
+}
+
+.publicar:hover {
+  background-color: var(--cor-verde-petroleo);
+}
+
+/* Menu fixo na parte de baixo da tela */
+.menu {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  border-top: 1px solid var(--cor-cinza);
+  background-color: var(--cor-cinza-escuro);
+}
+
+.lista {
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0;
+  list-style: none;
+}
+
+/* Vale para os links e para o botão Sair, que têm a mesma aparência */
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: var(--cor-cinza-medio);
+  font-size: var(--texto-label);
+  transition: color 0.2s;
+}
+
+.item:hover,
+.ativo {
+  color: var(--cor-offwhite);
+}
+
+.ativo {
+  font-weight: var(--peso-semibold);
+}
+
+.conteudo {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* Tablet e computador: menu vira coluna fixa à esquerda */
+@media (min-width: 768px) {
+  .layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 40px;
+  }
+
+  .lateral {
+    position: sticky; /* acompanha a rolagem da página */
+    top: 40px;
+    flex-direction: column;
+    gap: 40px;
+    min-width: 176px;
+    padding: 40px 16px;
+    border-radius: 8px;
+  }
+
+  .publicar {
+    width: 100%;
+  }
+
+  .menu {
+    position: static;
+    border-top: none;
+    background: none;
+  }
+
+  .lista {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 0;
+  }
+
+  .item {
+    font-size: var(--texto-pequeno);
+  }
+
+  .conteudo {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+  }
+}
