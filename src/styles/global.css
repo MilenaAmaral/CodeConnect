@@ -58,3 +58,14 @@ a {
   outline: 2px solid var(--cor-verde-destaque);
   outline-offset: 2px;
 }
+
+/* Esconde o elemento na tela, mas mantém para leitores de tela.
+   Usado em rótulos e avisos que só fazem sentido para quem não vê a página. */
+.visualmente-oculto {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

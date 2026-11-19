@@ -1,0 +1,75 @@
+/* position: relative serve de referência para o ::after do link */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: var(--cor-cinza-escuro);
+}
+
+/* Fundo cinza em volta da capa, como no Figma */
+.moldura {
+  padding: 16px;
+  background-color: var(--cor-cinza-medio);
+}
+
+.capa {
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.corpo {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+}
+
+.titulo {
+  font-size: var(--texto-paragrafo);
+  font-weight: var(--peso-semibold);
+  transition: color 0.2s;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  inset: 0; /* cobre o card inteiro */
+}
+
+.descricao {
+  color: var(--cor-cinza-claro);
+  font-size: var(--texto-pequeno);
+}
+
+.rodape {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px 16px;
+}
+
+.autor {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--texto-label);
+}
+
+.card:hover .titulo {
+  color: var(--cor-verde-destaque);
+}
+
+/* Foco pelo teclado: o contorno aparece no card todo, não só no título */
+.card:has(.link:focus-visible) {
+  outline: 2px solid var(--cor-verde-destaque);
+  outline-offset: 2px;
+}
+
+.link:focus-visible {
+  outline: none;
+}

@@ -1,0 +1,14 @@
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* não encolhe quando o espaço fica apertado */
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--cor-verde-destaque);
+  border-radius: 50%;
+  background-color: var(--cor-verde-petroleo);
+  color: var(--cor-verde-destaque);
+  font-size: var(--texto-label);
+  font-weight: var(--peso-semibold);
+}

@@ -1,0 +1,32 @@
+.busca {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: var(--cor-cinza-escuro);
+  color: var(--cor-cinza-claro);
+}
+
+/* :focus-within destaca a barra inteira quando o campo de dentro recebe foco */
+.busca:focus-within {
+  border-color: var(--cor-verde-destaque);
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  background: none;
+  font-size: var(--texto-paragrafo);
+}
+
+.input::placeholder {
+  color: var(--cor-cinza-medio);
+}
+
+/* O contorno de foco já está na barra (focus-within), então tiramos o do campo */
+.input:focus-visible {
+  outline: none;
+}
