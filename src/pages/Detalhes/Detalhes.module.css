@@ -1,0 +1,87 @@
+.detalhes {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.voltar {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  width: fit-content;
+  color: var(--cor-verde-destaque);
+  font-size: var(--texto-pequeno);
+}
+
+.voltar:hover {
+  text-decoration: underline;
+}
+
+.card {
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: var(--cor-cinza-escuro);
+}
+
+.moldura {
+  padding: 16px;
+  background-color: var(--cor-cinza-medio);
+}
+
+.capa {
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.corpo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+}
+
+.titulo {
+  font-size: var(--texto-grande);
+  font-weight: var(--peso-semibold);
+}
+
+.descricao {
+  color: var(--cor-cinza-claro);
+  font-size: var(--texto-pequeno);
+}
+
+.rodape {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px 16px;
+}
+
+.autor {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--texto-label);
+}
+
+.secao {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.subtitulo {
+  font-size: var(--texto-paragrafo);
+  font-weight: var(--peso-semibold);
+}
+
+.naoEncontrado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 40px 0;
+  text-align: center;
+}

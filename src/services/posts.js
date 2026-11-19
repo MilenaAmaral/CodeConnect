@@ -30,3 +30,8 @@ export function buscarPosts(posts, termo) {
     ),
   )
 }
+
+// Procura um post pelo id da URL. Devolve null se não existir.
+export function buscarPostPorId(id) {
+  return listarPosts().find((post) => post.id === id) ?? null
+}

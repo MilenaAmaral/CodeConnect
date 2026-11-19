@@ -1,0 +1,50 @@
+.bloco {
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: var(--cor-cinza-escuro);
+  box-shadow: var(--sombra-editor);
+}
+
+.barra {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 8px 8px 0;
+}
+
+.aviso {
+  color: var(--cor-verde-destaque);
+  font-size: var(--texto-label);
+}
+
+.copiar {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border: 1px solid var(--cor-cinza);
+  border-radius: 4px;
+  color: var(--cor-cinza-claro);
+  font-size: var(--texto-label);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.copiar :global(.material-icons) {
+  font-size: 16px;
+}
+
+.copiar:hover {
+  border-color: var(--cor-verde-destaque);
+  color: var(--cor-verde-destaque);
+}
+
+/* overflow-x: código largo rola dentro do bloco, sem empurrar a página para o lado */
+.pre {
+  padding: 16px;
+  overflow-x: auto;
+  color: var(--cor-offwhite);
+  font-family: var(--fonte-codigo);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
